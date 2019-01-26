@@ -1,0 +1,15 @@
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\bin\Debug\Redactor.exe.config
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\bin\Debug\Redactor.exe
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\bin\Debug\Redactor.pdb
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor.csprojAssemblyReference.cache
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\MainWindow.g.cs
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\App.g.cs
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor_MarkupCompile.cache
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor_MarkupCompile.lref
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\MainWindow.baml
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor.g.resources
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor.Properties.Resources.resources
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor.csproj.GenerateResource.cache
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor.csproj.CoreCompileInputs.cache
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor.exe
+C:\Users\Настя\Desktop\c#\Redactor\Redactor\obj\Debug\Redactor.pdb
