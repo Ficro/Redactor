@@ -14,14 +14,5 @@ namespace Redactor.Classes.Tools
         {
             Artist.Figures[Artist.Figures.Count - 1].AddPoint(p);
         }
-        //public override void MouseDown(Point p)
-        //{
-        //    
-        //}
-
-        //public override void MouseMove(Point p)
-        //{
-        //    Artist.Figures[Artist.Figures.Count - 1].AddPoint(p);
-        //}
     }
 }

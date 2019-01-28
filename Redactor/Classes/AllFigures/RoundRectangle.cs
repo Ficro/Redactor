@@ -8,22 +8,21 @@ using System.Windows.Media;
 
 namespace Redactor.Classes.AllFigures
 {
-    public class Ellipse: Figure
+    class RoundRectangle : Figure
     {
-        public Ellipse(Point p) : base(p)
+        public RoundRectangle(Point p) : base(p)
         {
-
         }
         public override void AddPoint(Point p)
         {
             points[1] = p;
         }
+
         public override void Draw(DrawingContext dc)
         {
-            var space = Vector.Divide(Point.Subtract(points[0], points[1]), 2.0);
-            var center = Point.Add(points[1], space);
+            var square = Point.Subtract(points[0],points[1]);
 
-            dc.DrawEllipse(Artist.brush, Artist.pen, center, space.X, space.Y);
+            dc.DrawRoundedRectangle(Artist.brush, Artist.pen, new Rect(points[1], square), 10.0, 10.0);
         }
     }
 }

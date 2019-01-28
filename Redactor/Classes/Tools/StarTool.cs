@@ -3,25 +3,16 @@ using System.Windows;
 
 namespace Redactor.Classes.Tools
 {
-    class LineTool : Tool
+    class StarTool : Tool
     {
-        private bool Pressed = false;
-
         public override void MouseDown(Point p)
         {
-            Pressed = true;
-            Artist.Figures.Add(new Line(p));
+            Artist.Figures.Add(new Star(p));
         }
 
         public override void MouseMove(Point p)
         {
-            if (Pressed)
             Artist.Figures[Artist.Figures.Count - 1].AddPoint(p);
-        }
-
-        public override void MouseUp(Point p)
-        {
-            Pressed = false;
         }
     }
 }
