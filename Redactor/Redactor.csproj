@@ -67,11 +67,15 @@
     <Compile Include="Classes\AllFigures\Figure.cs" />
     <Compile Include="Classes\AllFigures\Line.cs" />
     <Compile Include="Classes\AllFigures\Rectangle.cs" />
+    <Compile Include="Classes\AllFigures\RoundRectangle.cs" />
+    <Compile Include="Classes\AllFigures\Star.cs" />
     <Compile Include="Classes\Artist.cs" />
     <Compile Include="Classes\FHost.cs" />
     <Compile Include="Classes\Tools\EllipseTool.cs" />
     <Compile Include="Classes\Tools\LineTool.cs" />
     <Compile Include="Classes\Tools\RectangleTool.cs" />
+    <Compile Include="Classes\Tools\RoundRectangleTool.cs" />
+    <Compile Include="Classes\Tools\StarTool.cs" />
     <Compile Include="Classes\Tools\Tool.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -104,6 +108,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dashRect.png" />
+    <Resource Include="handImage.png" />
+    <Resource Include="move.png" />
+    <Resource Include="search.png" />
+    <Resource Include="z.png" />
+  </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Classes\Images\0.png" />
+    <Resource Include="Classes\Images\1.png" />
+    <Resource Include="Classes\Images\2.png" />
+    <Resource Include="Classes\Images\3.png" />
+    <Resource Include="Classes\Images\4.png" />
+    <Resource Include="Classes\Images\5.png" />
+    <Resource Include="Classes\Images\z.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,18 +1,10 @@
 ﻿using Redactor.Classes;
 using Redactor.Classes.AllFigures;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 namespace Redactor
 {
     /// <summary>
@@ -20,10 +12,16 @@ namespace Redactor
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
             MainCanvas.Children.Add(Artist.FHost);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.Artist.SelectedTool = Classes.Artist.Tools[Convert.ToInt32((sender as Button).Tag)];
         }
 
         private void MainCanvasMouseDown(object sender, MouseButtonEventArgs e)
