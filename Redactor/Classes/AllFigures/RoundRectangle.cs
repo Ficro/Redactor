@@ -8,9 +8,9 @@ using System.Windows.Media;
 
 namespace Redactor.Classes.AllFigures
 {
-    public class Rectangle : Figure
+    class RoundRectangle : Figure
     {
-        public Rectangle(Point p) : base(p)
+        public RoundRectangle(Point p) : base(p)
         {
             SelectedFill = Artist.SelectedFill.Clone();
             SelectedLine = Artist.SelectedLine.Clone();
@@ -19,9 +19,12 @@ namespace Redactor.Classes.AllFigures
         {
             points[1] = p;
         }
+
         public override void Draw(DrawingContext dc)
         {
-            dc.DrawRectangle(SelectedFill, SelectedLine, new Rect(points[0], points[1]));
+            var square = Point.Subtract(points[0],points[1]);
+
+            dc.DrawRoundedRectangle(SelectedFill, SelectedLine, new Rect(points[1], square), 10.0, 10.0);
         }
     }
 }

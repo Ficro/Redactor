@@ -12,16 +12,16 @@ namespace Redactor.Classes.AllFigures
     {
         public Line()
         {
-               
+            
         }
 
         public Line(Point p) : base(p)
         {
-            
+            SelectedLine = Artist.SelectedLine.Clone();
         }
         public override void Draw(DrawingContext dc)
         {
-            dc.DrawLine(new Pen(Brushes.Black, 4), points[0], points[1]);
+            dc.DrawLine(SelectedLine, points[0], points[1]);
         }
 
         public override void AddPoint(Point p)

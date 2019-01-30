@@ -1,18 +1,10 @@
 ﻿using Redactor.Classes;
 using Redactor.Classes.AllFigures;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 namespace Redactor
 {
     /// <summary>
@@ -20,10 +12,68 @@ namespace Redactor
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
             MainCanvas.Children.Add(Artist.FHost);
+
+            Brush[] colors =             
+            {
+                Brushes.Maroon,Brushes.Crimson,Brushes.DeepPink,Brushes.Fuchsia,Brushes.DarkOrange,Brushes.Orange,Brushes.Yellow,Brushes.Lime,Brushes.Green,Brushes.Teal,
+                Brushes.Aqua,Brushes.Blue,Brushes.Navy,Brushes.BlueViolet,Brushes.Indigo,Brushes.Black,Brushes.Gray,Brushes.White,
+
+            };
+
+            int j = 0;
+            foreach (var brush in colors)    
+            {
+                Button newButton = new Button()
+                {
+                    Width = 30,
+                    Height = 30,
+                    Background = brush,
+                    Tag = brush
+                };
+                newButton.SetValue(Grid.RowProperty, j);
+                newButton.SetValue(Grid.ColumnProperty, 1);
+                j++;
+                newButton.Click += new RoutedEventHandler(ButtonFill_Click);
+                Palette.Children.Add(newButton);
+
+            }
+
+            j = 0;
+            foreach (var brush in colors)     
+            {
+                Button newButton = new Button()
+                {
+                    Width = 30,
+                    Height = 30,
+                    Background = brush,
+                    Tag = brush
+                };
+                newButton.SetValue(Grid.ColumnProperty, 0);
+                newButton.SetValue(Grid.RowProperty, j);
+                j++;
+                newButton.Click += new RoutedEventHandler(ButtonLine_Click);
+                Palette.Children.Add(newButton);
+
+            }
+        }
+
+        private void ButtonFill_Click(object sender, RoutedEventArgs e)
+        {
+            Artist.SelectedFill = (sender as Button).Tag as Brush;
+        }
+        private void ButtonLine_Click(object sender, RoutedEventArgs e)
+        {
+            Artist.SelectedLine = new Pen((sender as Button).Background, 2.0);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.Artist.SelectedTool = Classes.Artist.Tools[Convert.ToInt32((sender as Button).Tag)];
         }
 
         private void MainCanvasMouseDown(object sender, MouseButtonEventArgs e)
@@ -53,5 +103,7 @@ namespace Redactor
             dc.Close();
             Artist.FHost.Children.Add(dv);
         }
-    }
+
+        
+}
 }

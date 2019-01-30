@@ -12,7 +12,8 @@ namespace Redactor.Classes.AllFigures
     {
         public Ellipse(Point p) : base(p)
         {
-
+            SelectedFill = Artist.SelectedFill.Clone();
+            SelectedLine = Artist.SelectedLine.Clone();
         }
         public override void AddPoint(Point p)
         {
@@ -20,7 +21,10 @@ namespace Redactor.Classes.AllFigures
         }
         public override void Draw(DrawingContext dc)
         {
-            dc.DrawRectangle(Brushes.Transparent, new Pen(Brushes.Black, 4), new Ell(points[0], points[1]));
+            var space = Vector.Divide(Point.Subtract(points[0], points[1]), 2.0);
+            var center = Point.Add(points[1], space);
+
+            dc.DrawEllipse(SelectedFill, SelectedLine, center, space.X, space.Y);
         }
     }
 }

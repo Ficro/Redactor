@@ -5,10 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Redactor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="563.333" Width="934.667">
     <Grid>
-        <Canvas Background="Gray" x:Name="MainCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDown="MainCanvasMouseDown" MouseMove="MainCanvasMouseMove">
-            
-        </Canvas>
+        <Canvas Background="Gray" x:Name="MainCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDown="MainCanvasMouseDown" MouseMove="MainCanvasMouseMove" Margin="82,2,0,0"/>
+        <Grid HorizontalAlignment="Left" Height="333" VerticalAlignment="Top" Width="82">
+            <ToolBar HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="80" Header="TOOLS" Cursor="Hand" Margin="0,2,0,0">
+                <Button x:Name="_0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Height="56" Click="Button_Click" Cursor="Hand" Tag = "0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Classes/Images/0.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="_1" Content="" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="56" Click="Button_Click" Cursor="Hand" Tag = "1">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Classes/Images/1.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="_2" Content="" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="56" Click="Button_Click" Cursor="Hand" Tag = "2">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Classes/Images/2.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="_3" Content="" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="56" Click="Button_Click" Cursor="Hand" Tag = "3">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Classes/Images/4.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="_4" Content="" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="56" Click="Button_Click" Cursor="Hand" Tag = "4">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Classes/Images/5.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="_5" Content="" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="56" Click="Button_Click" Cursor="Hand" Tag = "5">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Classes/Images/3.png"/>
+                    </Button.Background>
+                </Button>
+            </ToolBar>
+            <Grid Margin="1,95,0,-175" HorizontalAlignment="Left"  x:Name="Palette" Background="#FFD1CDC9" Width="79" Cursor="Hand" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="FILL" VerticalAlignment="Top" Width="35" Margin="43,71,0,0" Foreground="Black" BorderBrush="{x:Null}"/>
+            <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="LINE" VerticalAlignment="Top" Width="35" Margin="5,71,42,0" Foreground="Black" BorderBrush="{x:Null}"/>
+        </Grid>
     </Grid>
 </Window>

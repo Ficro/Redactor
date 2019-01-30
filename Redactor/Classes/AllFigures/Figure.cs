@@ -31,5 +31,7 @@ namespace Redactor.Classes.AllFigures
         {
 
         }
+        public Brush SelectedFill { get; set; }
+        public Pen SelectedLine;
     }
 }
