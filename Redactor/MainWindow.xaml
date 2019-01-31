@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Redactor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="563.333" Width="934.667">
+        Title="MainWindow" Height="629.333" Width="990.667">
     <Grid>
-        <Canvas Background="Gray" x:Name="MainCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDown="MainCanvasMouseDown" MouseMove="MainCanvasMouseMove" Margin="82,2,0,0"/>
         <Grid HorizontalAlignment="Left" Height="333" VerticalAlignment="Top" Width="82">
             <ToolBar HorizontalAlignment="Left" Height="67" VerticalAlignment="Top" Width="80" Header="TOOLS" Cursor="Hand" Margin="0,2,0,0">
                 <Button x:Name="_0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Height="56" Click="Button_Click" Cursor="Hand" Tag = "0">
@@ -41,7 +40,7 @@
                     </Button.Background>
                 </Button>
             </ToolBar>
-            <Grid Margin="1,95,0,-175" HorizontalAlignment="Left"  x:Name="Palette" Background="#FFD1CDC9" Width="79" Cursor="Hand" >
+            <Grid Margin="1,95,0,-194" HorizontalAlignment="Left"  x:Name="Palette" Background="#FFD1CDC9" Width="79" Cursor="Hand" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30*"/>
                     <RowDefinition Height="30*"/>
@@ -69,6 +68,20 @@
             </Grid>
             <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="FILL" VerticalAlignment="Top" Width="35" Margin="43,71,0,0" Foreground="Black" BorderBrush="{x:Null}"/>
             <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="LINE" VerticalAlignment="Top" Width="35" Margin="5,71,42,0" Foreground="Black" BorderBrush="{x:Null}"/>
+        </Grid>
+        <Button Content="" HorizontalAlignment="Left" Height="42" Margin="17,535,0,0" VerticalAlignment="Top" Width="42" Cursor="Hand" BorderBrush="{x:Null}" Click="Button_Click" Tag="6">
+            <Button.Background>
+                <ImageBrush ImageSource="Classes/Images/zoom.png"/>
+            </Button.Background>
+        </Button>
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="83,1,0,0" >
+            <ScrollViewer Name="ScrollCanvas"  VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="False" Margin="0" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch" RenderTransformOrigin="-0.09,0.498">
+                <Canvas Background="Gray" x:Name="MainCanvas"  Margin="0,0,0,0" MouseDown="MainCanvasMouseDown" MouseMove="MainCanvasMouseMove" MouseLeave="Canvas_MouseLeave" Loaded="MainCanvas_Loaded" SizeChanged="MainCanvas_SizeChanged" MouseUp="MainCanvasMouseUp" HorizontalAlignment="left" VerticalAlignment="Top" Height="1000" Width="1800" RenderTransformOrigin="0.493,0.506" >
+                    <Canvas.LayoutTransform>
+                        <ScaleTransform x:Name="layout"/>
+                    </Canvas.LayoutTransform>
+                </Canvas>
+            </ScrollViewer>            
         </Grid>
     </Grid>
 </Window>

@@ -8,12 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/0.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/3.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/4.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/5.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/z.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/images/zoom.png")]
 
 

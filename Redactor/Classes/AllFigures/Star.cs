@@ -10,6 +10,20 @@ namespace Redactor.Classes.AllFigures
 {
     class Star: Figure
     {
+        public override Figure Clone()
+        {
+            return new Star
+            {
+                points = new List<Point>(points),
+                SelectedFill = this.SelectedFill,
+                SelectedLine = this.SelectedLine
+            };
+        }
+        public Star()
+        {
+
+        }
+
         public Star(Point p) : base(p)
         {
             SelectedFill = Artist.SelectedFill.Clone();

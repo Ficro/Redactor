@@ -7,6 +7,16 @@ namespace Redactor.Classes.AllFigures
 {
     class Polyline : Figure
     {
+        public override Figure Clone()
+        {
+            return new Polyline
+            {
+                points = new List<Point>(points),
+                SelectedFill = this.SelectedFill,
+                SelectedLine = this.SelectedLine
+            };
+        }
+        
         public Polyline()
         {
 

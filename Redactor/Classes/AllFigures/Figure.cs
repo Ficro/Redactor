@@ -10,11 +10,17 @@ namespace Redactor.Classes.AllFigures
 {
     public class Figure
     {
-        protected List<Point> points = new List<Point>();
+        public List<Point> points = new List<Point>();
 
         public Figure()
         {
 
+        }
+
+        public virtual Figure Clone()
+        {
+            return new Figure();
+            
         }
 
         public Figure(Point point)

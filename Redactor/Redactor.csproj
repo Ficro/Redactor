@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\AllFigures\DashRectangle.cs" />
     <Compile Include="Classes\AllFigures\Ellipse.cs" />
     <Compile Include="Classes\AllFigures\Figure.cs" />
     <Compile Include="Classes\AllFigures\Line.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Classes\Tools\RoundRectangleTool.cs" />
     <Compile Include="Classes\Tools\StarTool.cs" />
     <Compile Include="Classes\Tools\Tool.cs" />
+    <Compile Include="Classes\Tools\ZoomTool.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -118,7 +120,9 @@
     <Resource Include="search.png" />
     <Resource Include="z.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Classes\Images\zoom.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Classes\Images\0.png" />
     <Resource Include="Classes\Images\1.png" />

@@ -104,6 +104,36 @@ namespace Redactor
             Artist.FHost.Children.Add(dv);
         }
 
-        
-}
+        private void Canvas_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Artist.SelectedTool.MouseStop();
+            Invalidate();
+        }
+
+        private void MainCanvas_Loaded(object sender, RoutedEventArgs e)
+        {
+            Artist.CanvasHeigth = MainCanvas.ActualHeight;
+            Artist.CanvasWidth = MainCanvas.ActualWidth;
+        }
+
+        private void MainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            Artist.CanvasHeigth = MainCanvas.ActualHeight;
+            Artist.CanvasWidth = MainCanvas.ActualWidth;
+        }
+
+        private void MainCanvasMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if (Artist.SelectedTool != Artist.Tools[6])
+                Artist.AddCondition();
+            Artist.SelectedTool.MouseUp(e.GetPosition(MainCanvas));
+            if (Artist.SelectedTool == Artist.Tools[6])
+            {
+                MainCanvas.LayoutTransform = new ScaleTransform(Artist.ScaleRateX, Artist.ScaleRateY);
+                ScrollCanvas.ScrollToVerticalOffset(Artist.DistanceToPointY * Artist.ScaleRateY);
+                ScrollCanvas.ScrollToHorizontalOffset(Artist.DistanceToPointX * Artist.ScaleRateX);
+            }
+            Invalidate();
+        }
+    }
 }

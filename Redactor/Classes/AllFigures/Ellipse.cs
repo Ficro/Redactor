@@ -10,6 +10,20 @@ namespace Redactor.Classes.AllFigures
 {
     public class Ellipse: Figure
     {
+        public override Figure Clone()
+        {
+            return new Ellipse
+            {
+                points = new List<Point>(points),
+                SelectedFill = this.SelectedFill,
+                SelectedLine = this.SelectedLine
+            };
+        }
+        public Ellipse()
+        {
+
+        }
+
         public Ellipse(Point p) : base(p)
         {
             SelectedFill = Artist.SelectedFill.Clone();

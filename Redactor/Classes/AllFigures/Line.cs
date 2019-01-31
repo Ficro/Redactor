@@ -10,6 +10,15 @@ namespace Redactor.Classes.AllFigures
 {
     class Line : Figure
     {
+        public override Figure Clone()
+        {
+            return new Line
+            {
+                points = new List<Point>(points),
+                SelectedFill = this.SelectedFill,
+                SelectedLine = this.SelectedLine
+            };
+        }
         public Line()
         {
             

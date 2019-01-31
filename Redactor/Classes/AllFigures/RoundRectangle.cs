@@ -10,6 +10,20 @@ namespace Redactor.Classes.AllFigures
 {
     class RoundRectangle : Figure
     {
+        public override Figure Clone()
+        {
+            return new RoundRectangle
+            {
+                points = new List<Point>(points),
+                SelectedFill = this.SelectedFill,
+                SelectedLine = this.SelectedLine
+            };
+        }
+        public RoundRectangle()
+        {
+
+        }
+
         public RoundRectangle(Point p) : base(p)
         {
             SelectedFill = Artist.SelectedFill.Clone();

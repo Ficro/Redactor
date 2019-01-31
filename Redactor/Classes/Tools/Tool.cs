@@ -9,6 +9,7 @@ namespace Redactor.Classes.Tools
 {
     public class Tool
     {
+        protected bool pressed = false;
         public virtual void MouseDown(Point p)
         {
 
@@ -22,6 +23,12 @@ namespace Redactor.Classes.Tools
         public virtual void MouseMove(Point p)
         {
 
+        }
+
+        public virtual void MouseStop()
+        {
+            if (pressed)
+            pressed = false;
         }
     }
 }
